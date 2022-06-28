@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:test_1/app_theme.dart';
-import 'package:test_1/register_view/register_view.dart';
+import 'package:test_1/onboardiing_view/onboarding_view.dart';
 
 void main() {
   runApp(
@@ -18,6 +18,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'test_1',
         theme: myTheme(),
-        home: const RegisterView());
+        home: const OnboardingView());
   }
 }
