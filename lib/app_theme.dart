@@ -5,6 +5,7 @@ class AppTheme {
   static const Color primaryColor = Colors.teal;
   static const Color accenColor = Color.fromARGB(255, 236, 196, 148);
   static const Color smallBtn = Color(0XFFfaf2e8);
+  static const Color hintColor = Color(0xffababab);
 
   static const double kPadding = 20;
 
@@ -27,23 +28,8 @@ class AppTheme {
   );
   static TextStyle hintText = const TextStyle(
     color: Color(0xffababab),
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: FontWeight.w400,
-  );
-  static TextStyle bottomNavText = const TextStyle(
-    color: Colors.white,
-    fontSize: 18,
-    fontWeight: FontWeight.w500,
-  );
-  static TextStyle cardText = const TextStyle(
-    color: Color(0xff3e3e3e),
-    fontSize: 14,
-    fontWeight: FontWeight.w700,
-  );
-  static TextStyle orderText = const TextStyle(
-    color: Color(0xffababab),
-    fontSize: 14,
-    fontWeight: FontWeight.w700,
   );
 }
 
@@ -78,7 +64,12 @@ ThemeData myTheme() {
 
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
-    borderRadius: BorderRadius.circular(10),
+    borderRadius: BorderRadius.circular(3),
+    borderSide: const BorderSide(color: Colors.black),
+    gapPadding: 10,
+  );
+  OutlineInputBorder focusedBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(3),
     borderSide: const BorderSide(color: AppTheme.primaryColor),
     gapPadding: 10,
   );
@@ -86,7 +77,7 @@ InputDecorationTheme inputDecorationTheme() {
     floatingLabelBehavior: FloatingLabelBehavior.never,
     contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
     enabledBorder: outlineInputBorder,
-    focusedBorder: outlineInputBorder,
+    focusedBorder: focusedBorder,
     border: outlineInputBorder,
   );
 }

@@ -3,6 +3,7 @@ import 'package:test_1/app_theme.dart';
 import 'package:test_1/onboardiing_view/components/intro_content.dart';
 import 'package:test_1/onboardiing_view/components/skip_btn.dart';
 import 'package:test_1/widgets/main_btn.dart';
+import 'package:test_1/widgets/text_with_btn.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({Key? key}) : super(key: key);
@@ -111,24 +112,10 @@ class _OnboardingViewState extends State<OnboardingView> {
                         btnText: 'Get started',
                         onPressed: () {},
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Don\'t have an acount ?',
-                              style: AppTheme.hintText.copyWith(fontSize: 12),
-                            ),
-                            TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'Sign Up',
-                                  style: AppTheme.blackButtonText.copyWith(
-                                      color: Colors.blueAccent, fontSize: 12),
-                                ))
-                          ],
-                        ),
+                      TextWithBtn(
+                        mainText: 'Don\'t have an acount ?',
+                        btnText: 'Sign Up',
+                        btnFunction: () {},
                       )
                     ],
                   ),
