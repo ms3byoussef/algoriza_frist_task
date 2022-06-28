@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:test_1/app_theme.dart';
 import 'package:test_1/onboardiing_view/components/intro_content.dart';
 import 'package:test_1/onboardiing_view/components/skip_btn.dart';
+import 'package:test_1/register_view/register_view.dart';
+import 'package:test_1/sign_in_View/sign_in_view.dart';
 import 'package:test_1/widgets/main_btn.dart';
 import 'package:test_1/widgets/text_with_btn.dart';
 
@@ -51,7 +53,10 @@ class _OnboardingViewState extends State<OnboardingView> {
                     child: Column(
                       children: [
                         SkipBtn(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (_) => const SignInView()));
+                          },
                         ),
                         const SizedBox(
                           height: 20,
@@ -110,12 +115,18 @@ class _OnboardingViewState extends State<OnboardingView> {
                       MainBtn(
                         backgroundColor: AppTheme.primaryColor,
                         btnText: 'Get started',
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (_) => const SignInView()));
+                        },
                       ),
                       TextWithBtn(
                         mainText: 'Don\'t have an acount ?',
                         btnText: 'Sign Up',
-                        btnFunction: () {},
+                        btnFunction: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (_) => const RegisterView()));
+                        },
                       )
                     ],
                   ),

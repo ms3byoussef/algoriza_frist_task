@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_1/app_theme.dart';
+import 'package:test_1/sign_in_View/sign_in_view.dart';
 import 'package:test_1/widgets/custom_form_field.dart';
 import 'package:test_1/widgets/main_btn.dart';
 import 'package:test_1/widgets/outlined_btn.dart';
@@ -34,12 +35,33 @@ class RigsterForm extends StatelessWidget {
               style: AppTheme.hintText,
             ),
           ),
-          Text(
-            'Register',
-            style: AppTheme.introText.copyWith(
-                fontSize: 30,
-                fontFamily: 'FiraSans',
-                fontWeight: FontWeight.w500),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Register',
+                style: AppTheme.introText.copyWith(
+                    fontSize: 30,
+                    fontFamily: 'FiraSans',
+                    fontWeight: FontWeight.w500),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Help",
+                    style: AppTheme.hintText.copyWith(color: Colors.blue),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset(
+                      'assets/icons/question.png',
+                      height: 18,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
           const SizedBox(height: 10),
           CustomFormField(
@@ -134,8 +156,11 @@ class RigsterForm extends StatelessWidget {
           const SizedBox(height: 10),
           TextWithBtn(
             mainText: 'Don\'t have an acount ?',
-            btnText: 'Rigester Here',
-            btnFunction: () {},
+            btnText: 'Sign In  Here',
+            btnFunction: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => const SignInView()));
+            },
           ),
           const SizedBox(height: 10),
           Text(
@@ -144,7 +169,15 @@ class RigsterForm extends StatelessWidget {
               community is safe and clean, ''',
             style: AppTheme.hintText,
             textAlign: TextAlign.center,
-          )
+          ),
+          const SizedBox(height: 10),
+          Center(
+            child: Text(
+              'Termes and Condtions',
+              style: AppTheme.hintText.copyWith(color: Colors.blue),
+              textAlign: TextAlign.center,
+            ),
+          ),
         ],
       ),
     );

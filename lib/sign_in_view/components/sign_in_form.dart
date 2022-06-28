@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:test_1/app_theme.dart';
+import 'package:test_1/register_view/register_view.dart';
 import 'package:test_1/widgets/custom_form_field.dart';
 import 'package:test_1/widgets/main_btn.dart';
 import 'package:test_1/widgets/outlined_btn.dart';
@@ -32,12 +32,33 @@ class SignInForm extends StatelessWidget {
               style: AppTheme.hintText,
             ),
           ),
-          Text(
-            'Sign In',
-            style: AppTheme.introText.copyWith(
-                fontSize: 30,
-                fontFamily: 'FiraSans',
-                fontWeight: FontWeight.w500),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Sign In',
+                style: AppTheme.introText.copyWith(
+                    fontSize: 30,
+                    fontFamily: 'FiraSans',
+                    fontWeight: FontWeight.w500),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Help",
+                    style: AppTheme.hintText.copyWith(color: Colors.blue),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset(
+                      'assets/icons/question.png',
+                      height: 18,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
           const SizedBox(height: 20),
           CustomFormField(
@@ -100,7 +121,10 @@ class SignInForm extends StatelessWidget {
           TextWithBtn(
             mainText: 'Don\'t have an acount ?',
             btnText: 'Rigester Here',
-            btnFunction: () {},
+            btnFunction: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const RegisterView()));
+            },
           ),
           const SizedBox(height: 10),
           Text(
