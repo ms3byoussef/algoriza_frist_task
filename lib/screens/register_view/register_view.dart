@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:test_1/register_view/components/register_form.dart';
-import 'package:test_1/sign_in_View/sign_in_view.dart';
+import 'package:test_1/screens/sign_in_view/sign_in_view.dart';
+
+import 'components/register_form.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({Key? key}) : super(key: key);

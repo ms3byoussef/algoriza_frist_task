@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_1/sign_in_View/components/sign_in_form.dart';
+import 'package:test_1/screens/sign_in_view/components/sign_in_form.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({Key? key}) : super(key: key);

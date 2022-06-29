@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_1/app_theme.dart';
-import 'package:test_1/sign_in_View/sign_in_view.dart';
+import 'package:test_1/screens/sign_in_view/sign_in_view.dart';
 import 'package:test_1/widgets/custom_form_field.dart';
 import 'package:test_1/widgets/main_btn.dart';
 import 'package:test_1/widgets/outlined_btn.dart';

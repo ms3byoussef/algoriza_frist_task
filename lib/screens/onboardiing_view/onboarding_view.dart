@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:test_1/app_theme.dart';
-import 'package:test_1/onboardiing_view/components/intro_content.dart';
-import 'package:test_1/onboardiing_view/components/skip_btn.dart';
-import 'package:test_1/register_view/register_view.dart';
-import 'package:test_1/sign_in_View/sign_in_view.dart';
+
+import 'package:test_1/screens/register_view/register_view.dart';
+import 'package:test_1/screens/sign_in_view/sign_in_view.dart';
 import 'package:test_1/widgets/main_btn.dart';
 import 'package:test_1/widgets/text_with_btn.dart';
+
+import 'components/intro_content.dart';
+import 'components/skip_btn.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({Key? key}) : super(key: key);
